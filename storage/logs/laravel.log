@@ -1,0 +1,33 @@
+[2022-07-31 22:30:01] local.ERROR: Class "Modules\Blog\Providers\BlogServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Modules\\Blog\\Providers\\BlogServiceProvider\" not found at C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Modules\\\\Blog\\\\Pr...')
+#1 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\
+widart\\laravel-modules\\src\\Laravel\\Module.php(33): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\
+widart\\laravel-modules\\src\\Module.php(264): Nwidart\\Modules\\Laravel\\Module->registerProviders()
+#4 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\
+widart\\laravel-modules\\src\\FileRepository.php(321): Nwidart\\Modules\\Module->register()
+#5 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\
+widart\\laravel-modules\\src\\Providers\\BootstrapServiceProvider.php(23): Nwidart\\Modules\\FileRepository->register()
+#6 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(686): Nwidart\\Modules\\Providers\\BootstrapServiceProvider->register()
+#7 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\
+widart\\laravel-modules\\src\\ModulesServiceProvider.php(31): Illuminate\\Foundation\\Application->register(Object(Nwidart\\Modules\\Providers\\BootstrapServiceProvider))
+#8 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\
+widart\\laravel-modules\\src\\LaravelModulesServiceProvider.php(17): Nwidart\\Modules\\ModulesServiceProvider->registerModules()
+#9 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Nwidart\\Modules\\LaravelModulesServiceProvider->boot()
+#10 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(928): Illuminate\\Container\\Container->call(Array)
+#15 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(909): Illuminate\\Foundation\\Application->bootProvider(Object(Nwidart\\Modules\\LaravelModulesServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Nwidart\\Modules\\LaravelModulesServiceProvider), 20)
+#17 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(910): array_walk(Array, Object(Closure))
+#18 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(239): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 C:\\Users\\Parham\\Desktop\\quera answers git\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 C:\\Users\\Parham\\Desktop\\quera answers git\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
