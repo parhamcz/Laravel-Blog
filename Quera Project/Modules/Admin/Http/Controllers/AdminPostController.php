@@ -14,7 +14,7 @@ class AdminPostController extends Controller
      */
     public function index()
     {
-        return view('admin::index');
+        return view('admin::posts.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class AdminPostController extends Controller
      */
     public function create()
     {
-        return view('admin::create');
+        return view('admin::posts.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class AdminPostController extends Controller
      */
     public function edit($id)
     {
-        return view('admin::edit');
+        return view('admin::posts.edit');
     }
 
     /**
