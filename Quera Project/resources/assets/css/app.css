@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "font.css";
+
+@import "../plugins/bootstrap/css/bootstrap.rtl.min.css";
+@import "../plugins/bootstrap-icons/bootstrap-icons.css";
+
+@import "../plugins/select2/css/select2.min.css";
+
+@import "../plugins/treeview/css/hummingbird-treeview.min.css";
+
+html, body {
+    font-family: Vazir-Regular !important;
+    direction: rtl;
+    text-align: right;
+}
+
+.font-sans {
+    font-family: Vazir-Regular !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+select {
+    width: 60px !important;
+    direction: ltr;
+}
+
+.ck.ck-editor__main .ck-content {
+    height: 200px;
+}

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->group(function() {
     
-    Route::get('/', 'AdminController@index');
+    Route::get('/panel', 'AdminController@index');
     Route::resource('/users','AdminUserController');
     Route::resource('/posts','AdminPostController');
 });
