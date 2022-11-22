@@ -8,6 +8,6 @@
     <title> کوئرا </title>
 </head>
 <body>
-    // TODO
+    {{__('admin::admin.dashboard')}}
 </body>
 </html>
