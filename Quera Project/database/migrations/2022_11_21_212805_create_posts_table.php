@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->string('title');
             $table->string('slug');
             $table->string('categories');
@@ -23,6 +24,8 @@ return new class extends Migration
             $table->string('body');
             $table->string('image');
             $table->timestamps();
+            $table->boolean('approved')->default(0);
+            $table->integer('view')->default(0);
         });
     }
 
