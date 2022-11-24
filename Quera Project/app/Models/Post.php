@@ -6,14 +6,16 @@ use http\Env\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
+use App\Models\Category;
 
 class Post extends Model
 {
     use HasFactory;
-    public $table='posts';
+
+    public $table = 'posts';
 
     protected $fillable = [
-        'title','slug','description','body','view','images'
+        'title', 'slug', 'description', 'body', 'view', 'images'
     ];
 
     public function user()
@@ -21,9 +23,14 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function categories()
+    {
+        return $this->morphToMany(Category::class, 'catable');
+    }
+
     public function path()
     {
-        return '/posts/'.$this->slug;
+        return '/posts/' . $this->slug;
     }
 
     public function isApproved()
