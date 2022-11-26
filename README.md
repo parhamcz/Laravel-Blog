@@ -1,3 +1,3 @@
-# SampleBlog
-A sample project from Quera's Laravel College.
-A Blog that have admin and client panel.
+# :test_tube:	SampleBlog :test_tube:	
+:pencil2: A sample project from Laravel College.
+:scroll:A Blog that have admin and client panel.
