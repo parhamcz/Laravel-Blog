@@ -9,8 +9,10 @@
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.0",
+        "laravel/jetstream": "^2.12",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.5",
         "nwidart/laravel-modules": "^9.0"
     },
     "require-dev": {
