@@ -16,31 +16,31 @@
             @csrf
 
             <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-label for="mobile" value="{{ __('validation.attributes.mobile') }}" />
+                <x-jet-input id="mobile" class="block mt-1 w-full eninputs" type="text" name="mobile" :value="old('mobile')"/>
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-label for="password" value="{{ __('validation.attributes.password') }}" />
+                <x-jet-input id="password" class="block mt-1 w-full eninputs" type="password" name="password"/>
             </div>
 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="mr-2 text-sm text-gray-600"> {{ __('admin::admin.remember_me') }} </span>
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-center mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                    <a class="ml-2 text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        فراموشی رمز
                     </a>
                 @endif
 
                 <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
+                    {{ __('admin::admin.login') }}
                 </x-jet-button>
             </div>
         </form>
