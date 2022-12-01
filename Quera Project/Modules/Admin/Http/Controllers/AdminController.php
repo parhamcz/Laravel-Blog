@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin::dashboard');
+        return view('admin::index');
     }
 
     /**
@@ -23,7 +23,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return; //view('admin::create');
+        return view('admin::create');
     }
 
     /**
@@ -43,7 +43,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        return ;//view('admin::show');
+        return view('admin::show');
     }
 
     /**
@@ -53,7 +53,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        return ;//view('admin::edit');
+        return view('admin::edit');
     }
 
     /**

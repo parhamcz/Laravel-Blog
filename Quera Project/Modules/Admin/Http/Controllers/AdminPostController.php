@@ -2,77 +2,65 @@
 
 namespace Modules\Admin\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Routing\Controller;
+use App\Models\Post;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Modules\Admin\Traits\AdminUtil;
 
 class AdminPostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
+    use AdminUtil;
+
     public function index()
     {
         return view('admin::posts.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     * @return Renderable
-     */
+    public function data(Request $request)
+    {
+        return response()->json(Post::generateDataTable($request));
+    }
+
+    public function activate(Post $post)
+    {
+        // TODO
+        return redirect(route('posts.index'));
+    }
+
     public function create()
     {
-        return view('admin::posts.create');
+        // TODO
+        return view('admin::posts.create', compact('categories', 'tags'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Renderable
-     */
     public function store(Request $request)
     {
-        //
+        // TODO
+        return redirect()->route('posts.index');
     }
 
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function show($id)
-    {
-        return view('admin::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
-    {
-        return view('admin::posts.edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $id
-     * @return Renderable
-     */
-    public function update(Request $request, $id)
+    public function show(Post $post)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     * @param int $id
-     * @return Renderable
-     */
-    public function destroy($id)
+    public function edit(Post $post)
+    {
+        // TODO
+        return view('admin::posts.edit', compact('post', 'categories', 'tags'));
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        // TODO
+        return redirect()->route('posts.index');
+    }
+
+    public function destroy(Post $post)
     {
         //
     }
