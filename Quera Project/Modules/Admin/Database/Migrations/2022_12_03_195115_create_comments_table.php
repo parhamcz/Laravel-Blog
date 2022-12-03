@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('parent_id')->nullable()->references('id')->on('comments');
+            $table->string('text');
             $table->timestamps();
+            $table->boolean('approved')->default(0);
+            $table->morphs('commentalbe');
+//            $table->integer('commentable_id');
+//            $table->string('commentable_type');
         });
     }
 
