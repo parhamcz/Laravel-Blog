@@ -28,7 +28,11 @@ class AdminTagController extends Controller
 
     public function store(Request $request)
     {
-        // TODO
+        $inputs = $request->all();
+        if(!request()->filled('slug')) {
+            $inputs['slug'] = $this->createSlug($request->name, '-');
+        }
+        Tag::create($inputs);
         return redirect()->route('tags.index');
     }
 
@@ -44,7 +48,11 @@ class AdminTagController extends Controller
 
     public function update(Request $request, Tag $tag)
     {
-        // TODO
+        $inputs = $request->all();
+        if(!request()->filled('slug')) {
+            $inputs['slug'] = $this->createSlug($request->name, '-');
+        }
+        $tag->update($inputs);
         return redirect()->route('tags.index');
     }
 
