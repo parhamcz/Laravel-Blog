@@ -24,13 +24,17 @@ class AdminCategoryController extends Controller
 
     public function create()
     {
-        // TODO
+        $categories = Category::latest()->get();
         return view('admin::categories.create', compact('categories'));
     }
 
     public function store(Request $request)
     {
-        // TODO
+        $inputs = $request->all();
+        if(!request()->filled('slug')) {
+            $inputs['slug'] = $this->createSlug($request->name, '-');
+        }
+        Category::create($inputs);
         return redirect()->route('categories.index');
     }
 
@@ -41,13 +45,17 @@ class AdminCategoryController extends Controller
 
     public function edit(Category $category)
     {
-        // TODO
+        $categories = Category::latest()->get();
         return view('admin::categories.edit', compact('category', 'categories'));
     }
 
     public function update(Request $request, Category $category)
     {
-        // TODO
+        $inputs = $request->all();
+        if(!request()->filled('slug')) {
+            $inputs['slug'] = $this->createSlug($request->name, '-');
+        }
+        $category->update($inputs);
         return redirect()->route('categories.index');
     }
 
