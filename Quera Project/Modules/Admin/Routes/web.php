@@ -19,4 +19,8 @@ Route::prefix('/admin')->group(function () {
 
     Route::resource('/tags', AdminTagController::class);
     Route::get('/tags-data', [AdminTagController::class, 'data'])->name('tags.data');
+    Route::resource('/themes', AdminThemeController::class);
+
+    Route::get('/themes-data', [AdminThemeController::class, 'data'])->name('themes.data');
+    Route::post('/activate/themes/{theme}', [AdminThemeController::class, 'activate'])->name('themes.activate');
 });

@@ -2,6 +2,9 @@
 
 namespace Modules\Admin\Http\Controllers;
 
+use App\Models\Post;
+use App\Models\Theme;
+use App\Models\User;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -14,7 +17,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin::index');
+        $countUsers = count(User::all());
+        $countPosts = count(Post::all());
+        $theme = Theme::where('active', 1)->first();
+        return view('admin::dashboard', compact('countUsers', 'countPosts', 'theme'));
     }
 
     /**
@@ -23,7 +29,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.posts::create');
+        return view('admin::create');
     }
 
     /**
@@ -43,7 +49,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        return view('admin.posts::show');
+        return view('admin::show');
     }
 
     /**
