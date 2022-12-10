@@ -23,7 +23,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin::create');
+        return view('admin.posts::create');
     }
 
     /**
@@ -43,7 +43,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        return view('admin::show');
+        return view('admin.posts::show');
     }
 
     /**

@@ -6,6 +6,9 @@ use Modules\Admin\Http\Controllers\AdminPostController;
 use Modules\Admin\Http\Controllers\AdminCategoryController;
 
 Route::prefix('/admin')->group(function () {
+    Route::get('/panel', 'AdminController@index');
+    Route::resource('/users','AdminUserController');
+    Route::resource('/posts','AdminPostController');
 
     Route::resource('/posts', AdminPostController::class);
     Route::get('/posts-data', [AdminPostController::class, 'data'])->name('posts.data');
