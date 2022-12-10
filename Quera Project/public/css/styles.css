@@ -1,0 +1,70 @@
+.eninputs {
+  text-align: left;
+  direction: ltr;
+}
+
+.eninputs::-moz-placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+.eninputs:-ms-input-placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+.eninputs::placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+.rtl {
+  direction: rtl !important;
+}
+
+.ltr {
+  direction: ltr !important;
+}
+
+.logo-image {
+  height: 50px !important;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 3.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  background-color: white;
+}
+
+#footer .float-left {
+  height: 3.5rem;
+}
+
+#side-offcanvas-btn {
+  outline: none;
+  box-shadow: none;
+}
+
+.bi-plus-circle-dotted, .bi-dash-circle-dotted {
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.hummingbird-treeview, .hummingbird-treeview * {
+  font-size: 15px;
+}
+
+.list-image {
+  width: 100px !important;
+}
