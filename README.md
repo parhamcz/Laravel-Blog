@@ -1,4 +1,4 @@
-# Laravel Blog with React
+# Laravel Blog with Jetstream
 
 ![GitHub](https://img.shields.io/github/license/your-username/group-chat-api)
 ![PHP](https://img.shields.io/badge/PHP-%3E%207.4-blue)
